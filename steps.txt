@@ -3,6 +3,8 @@
 Understand the Structure: The dataset contains grayscale images in GIF format. Each subject has 11 images with different expressions and lighting conditions.
 Image Details: Load a few images to understand their size, resolution, and format. This helps in feature extraction and preprocessing.
 
+Inferences:
+Images are in different file formats like .surprised, .wink. to be able to use it in opencv, we need to convert it in .png. 
 
 2. Preprocess the Data
 Load the Images: Use libraries such as OpenCV, PIL, or scikit-image in Python to load the images.
