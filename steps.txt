@@ -6,36 +6,36 @@ Image Details: Load a few images to understand their size, resolution, and forma
 Inferences:
 Images are in different file formats like .surprised, .wink. to be able to use it in opencv, we need to convert it in .png. 
 
-2. Preprocess the Data
-Load the Images: Use libraries such as OpenCV, PIL, or scikit-image in Python to load the images.
-Convert Images to Grayscale: If they are not already in grayscale, convert them.
-Resize/Crop Images: Ensure all images are of the same size if needed, by resizing or cropping.
-Normalize Images: Normalize pixel values to a common scale (e.g., [0, 1] or [-1, 1]).
+   2. Preprocess the Data
+   Load the Images: Use libraries such as OpenCV, PIL, or scikit-image in Python to load the images.
+   Convert Images to Grayscale: If they are not already in grayscale, convert them.
+   Resize/Crop Images: Ensure all images are of the same size if needed, by resizing or cropping.
+   Normalize Images: Normalize pixel values to a common scale (e.g., [0, 1] or [-1, 1]).
 
-3. Extract Features
-You need to extract hand-crafted features from each image. Here’s how to do it for each type of feature:
+   3. Extract Features
+   You need to extract hand-crafted features from each image. Here’s how to do it for each type of feature:
 
-Local Binary Patterns (LBP):
-LBP is used to describe the local texture of an image.
-Implement LBP using libraries such as scikit-image.
-Extract LBP histograms for each image.
+   Local Binary Patterns (LBP):
+   LBP is used to describe the local texture of an image.
+   Implement LBP using libraries such as scikit-image.
+   Extract LBP histograms for each image.
 
-Gabor Filters:
-Gabor filters are used to capture frequency and orientation information.
-Apply Gabor filters with different orientations and scales to each image.
-Extract the filtered responses as features.
+   Gabor Filters:
+   Gabor filters are used to capture frequency and orientation information.
+   Apply Gabor filters with different orientations and scales to each image.
+   Extract the filtered responses as features.
 
-Laplacian of Gaussian (LoG):
+   Laplacian of Gaussian (LoG):
 
-LoG is used to detect edges and blobs in the image.
-Apply LoG filtering to detect these features in the image.
-Extract the filtered responses.
+   LoG is used to detect edges and blobs in the image.
+   Apply LoG filtering to detect these features in the image.
+   Extract the filtered responses.
 
-Gray-Level Co-occurrence Matrix (GLCM):
+   Gray-Level Co-occurrence Matrix (GLCM):
 
-GLCM is used to describe the texture of the image by examining the spatial relationship between pixels.
-Compute the GLCM for each image.
-Extract texture features such as contrast, correlation, energy, and homogeneity.
+   GLCM is used to describe the texture of the image by examining the spatial relationship between pixels.
+   Compute the GLCM for each image.
+   Extract texture features such as contrast, correlation, energy, and homogeneity.
 
 
 4. Combine Features
