@@ -13,4 +13,5 @@ to develop a system that can recognize which subject an image belongs to, based 
 Given a dataset with images of different subjects under various conditions (like different facial expressions and lighting). The task is to develop a system that can accurately identify the subject in any given image. For example, if an image of subject14 is fed under any condition (like subject14.surprised), the system should correctly identify it as subject14.
 
 ## Folders:
-- processed_data: This folder stores the images in normalized form in .npy format.
+- normalized_data: This folder stores the images in normalized form in .npy format.
+- lbp_features: This folder includes the lbp feature of each image.
