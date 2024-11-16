@@ -38,6 +38,33 @@ ASM is useful in texture analysis, as it helps to quantify the degree of orderli
 
 https://medium.com/@girishajmera/feature-extraction-of-images-using-glcm-gray-level-cooccurrence-matrix-e4bda8729498
 
+If you’ve sent 6 unique properties as parameters to your GLCM computation, it means you are explicitly instructing the algorithm to calculate these 6 texture features for each GLCM. The 6 features come directly from your chosen properties.
+
+Common GLCM Properties (Features):
+
+	1.	Contrast: Measures the local intensity variation in the image.
+	2.	Correlation: Assesses how correlated a pixel is with its neighbor.
+	3.	Energy: Reflects textural uniformity (squared values of the GLCM).
+	4.	Homogeneity: Indicates the closeness of GLCM elements to the diagonal.
+	5.	ASM (Angular Second Moment): Another name for Energy.
+	6.	Entropy: Captures the randomness of intensity distributions.
+
+Why Only 6 Features?
+
+If you’re using a library like skimage.feature.greycomatrix and greycoprops in Python, the property parameter explicitly determines which features are computed. For instance, if you pass these properties:
+
+['contrast', 'dissimilarity', 'homogeneity', 'ASM', 'energy', 'correlation']
+
+	•	The GLCM is calculated for 4 angles (0°, 45°, 90°, 135°), but the properties are aggregated (e.g., averaged) across these angles to produce 6 unique values.
+	•	Each of these 6 values represents one feature derived from all angles for a given distance.
+
+How This Works:
+
+	•	For each angle, the GLCM is created.
+	•	The 6 properties are computed for each GLCM.
+	•	These features are then averaged (or combined based on your implementation) across the angles, resulting in 6 distinct outputs—one for each property.
+
+If you need further clarification or code context, feel free to share more details!
 
 GLCM (Gray Level Co-occurrence Matrix) features quantify various textural characteristics of an image, capturing patterns of pixel intensity distributions. In the context of face analysis, these features describe how pixel intensities are distributed spatially across the face, providing insights into the texture. Here’s a breakdown of each feature and what it represents:
 
